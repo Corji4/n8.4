@@ -2,7 +2,7 @@
 
 using namespace std;
 
-template <typename Type>
+template <typename Type=char>
 class List
 {
 public:

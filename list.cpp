@@ -23,8 +23,8 @@ void List<Type>::add_first(Type element)
 	}
 	turn *pv;
 	pv = new turn;
-	pv.element = element;
-	pv.next = NULL;
+	pv->element = element;
+	pv->next = NULL;
 	begin = pv;
 	end = begin;
 }
@@ -39,9 +39,9 @@ void List<Type>::add(Type element)
 	}
 	turn *pv;
 	pv = new turn;
-	pv.element = element;
-	pv.next = NULL;
-	end.next = pv;
+	pv->element = element;
+	pv->next = NULL;
+	end->next = pv;
 	end = pv;
 }
 
@@ -52,7 +52,7 @@ void List<Type>::del()
 	{
 		turn *pv;
 		pv = begin;
-		begin = begin.next;
+		begin = begin->next;
 		delete pv;
 	}
 	end = NULL;
@@ -64,7 +64,8 @@ void List<Type>::print()
 	turn *new_begin = begin;
 	while (new_begin)
 	{
-		cout << new_begin.element << " ";
+		cout << new_begin->element << " ";
+		new_begin = new_begin->next;
 	}
 	cout << endl;
 }
