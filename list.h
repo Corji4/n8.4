@@ -2,22 +2,31 @@
 
 using namespace std;
 
+template <typename NType>
+class turn
+{
+public:
+	turn();
+	~turn();
+	void add(turn<NType> *&begin, turn<NType> *&end, NType new_elemen);
+private:
+	NType element;
+	turn *next;
+public:
+	
+};
+
 template <typename Type=char>
 class List
 {
+
 public:
 	List();
 	~List();
 	void add(Type element);
-	void add_first(Type element);
-	void del();
 	void print();
-	//List compare(List First, List Second);
 private:
-	struct turn
-	{
-		Type element;
-		turn *next;
-	};
+	template <typename NType>
+	class turn;
 	turn *begin, *end;
 };

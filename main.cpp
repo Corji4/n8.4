@@ -2,13 +2,9 @@
 
 int main()
 {
-	/*List <char> one;
-	one.add_first('S');
-	one.add('O');
-	one.add('L');
+	List<char> one = List();
+	one.add('g');
 	one.print();
-	one.del();
-	one.print();*/
 	system("pause");
 	return 0;
 }
