@@ -13,20 +13,18 @@ turn<NType>::~turn()
 }
 
 template <typename NType>
-void turn<NType>::add(turn<NType> *&begin, turn<NType> *&end, NType new_element)
+void turn<NType>::add(NType new_element)
 {
-	turn<NType> *pv = NULL;
-	pv = new turn<NType>;
-	pv->next = NULL;
-	pv->element = new_element;
-	if (!begin)
+	element = new_element;
+	next = NULL;
+}
+
+template <typename NType>
+void turn<NType>::print(turn<NType> *begin, turn<NType> *end)
+{
+	while (begin)
 	{
-		begin = pv;
-		end = begin;
+		cout << begin->element;
 	}
-	else
-	{
-		end->next = pv;
-		end = pv;
-	}
+	cout << endl;
 }

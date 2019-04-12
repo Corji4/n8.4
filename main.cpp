@@ -2,7 +2,7 @@
 
 int main()
 {
-	List<char> one = List();
+	List<char> one('d');
 	one.add('g');
 	one.print();
 	system("pause");

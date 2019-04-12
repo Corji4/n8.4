@@ -8,25 +8,24 @@ class turn
 public:
 	turn();
 	~turn();
-	void add(turn<NType> *&begin, turn<NType> *&end, NType new_elemen);
+	void add(NType new_elemen);
+	void print(turn<NType> *begin, turn<NType> *end);
 private:
 	NType element;
 	turn *next;
-public:
-	
 };
 
 template <typename Type=char>
 class List
 {
-
 public:
 	List();
+	List(Type element);
 	~List();
 	void add(Type element);
 	void print();
 private:
 	template <typename NType>
 	class turn;
-	turn *begin, *end;
+	turn<Type> *begin, *end;
 };
