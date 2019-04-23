@@ -1,30 +1,21 @@
-#include "list.h"
-
-template <typename NType>
-turn<NType>::turn()
-{
-	next = NULL;
-}
-
-template <typename NType>
-turn<NType>::~turn()
-{
-
-}
-
-template <typename NType>
-void turn<NType>::add(NType new_element)
-{
-	element = new_element;
-	next = NULL;
-}
-
-template <typename NType>
-void turn<NType>::print(turn<NType> *begin, turn<NType> *end)
-{
-	while (begin)
-	{
-		cout << begin->element;
-	}
-	cout << endl;
-}
+//#include "list.h"
+//
+//template <typename Type>
+//turn<Type>::turn()
+//{
+//	this->element = 0;
+//	this->next = NULL;
+//}
+//
+//template <typename Type>
+//turn<Type>::turn(Type element)
+//{
+//	this->element = element;
+//	this->next = NULL;
+//}
+//
+//template <typename Type>
+//turn<Type>::~turn()
+//{
+//
+//}

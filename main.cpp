@@ -2,8 +2,9 @@
 
 int main()
 {
-	List<char> one('d');
+	List<char> one;
 	one.add('g');
+	one.add('d');
 	one.print();
 	system("pause");
 	return 0;

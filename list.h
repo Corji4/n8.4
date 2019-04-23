@@ -2,30 +2,86 @@
 
 using namespace std;
 
-template <typename NType>
-class turn
+template <class type>
+class part
 {
 public:
-	turn();
-	~turn();
-	void add(NType new_elemen);
-	void print(turn<NType> *begin, turn<NType> *end);
+	part();
+	~part();
+	void set_element(type new_element);
+	void set_next(part *new_next);
+	type get_element();
+	part *get_next();
 private:
-	NType element;
-	turn *next;
+	type element;
+	part *next;
 };
 
-template <typename Type=char>
-class List
+
+template <class type>
+class list
 {
 public:
-	List();
-	List(Type element);
-	~List();
-	void add(Type element);
-	void print();
+	list();
+	~list();
 private:
-	template <typename NType>
-	class turn;
-	turn<Type> *begin, *end;
 };
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+template <class type>
+part<type>::part()
+{
+	this->next = NULL;
+}
+
+template <class type>
+part<type>::~part()
+{
+
+}
+
+template <class type>
+void part<type>::set_element(type new_element)
+{
+	this->element = new_element;
+}
+
+template <class type>
+void part<type>::set_next(part *new_next)
+{
+	this->next = new_next;
+}
+
+template <class type>
+type part<type>::get_element()
+{
+	return this->element;
+}
+
+template <class type>
+part<type> *part<type>::get_next()
+{
+	return this->next;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+template <class type>
+list<type>::list() 
+{
+
+}
+
+template <class type>
+list<type>::~list()
+{
+
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
