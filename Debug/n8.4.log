@@ -1,8 +1,4 @@
-﻿  list.cpp
-  main.cpp
-  Generating Code...
-main.obj : error LNK2019: unresolved external symbol "public: __thiscall List<char>::List<char>(void)" (??0?$List@D@@QAE@XZ) referenced in function _main
-main.obj : error LNK2019: unresolved external symbol "public: __thiscall List<char>::~List<char>(void)" (??1?$List@D@@QAE@XZ) referenced in function _main
-main.obj : error LNK2019: unresolved external symbol "public: void __thiscall List<char>::add(char)" (?add@?$List@D@@QAEXD@Z) referenced in function _main
-main.obj : error LNK2019: unresolved external symbol "public: void __thiscall List<char>::print(void)" (?print@?$List@D@@QAEXXZ) referenced in function _main
-C:\Users\Corji4\source\repos\n8.4\Debug\n8.4.exe : fatal error LNK1120: 4 unresolved externals
+﻿  main.cpp
+c:\users\corji4\source\repos\n8.4\n8.4\main.cpp(10): warning C4018: '<': signed/unsigned mismatch
+c:\users\corji4\source\repos\n8.4\n8.4\main.cpp(16): warning C4018: '<': signed/unsigned mismatch
+  n8.4.vcxproj -> C:\Users\Corji4\source\repos\n8.4\Debug\n8.4.exe
